@@ -12,4 +12,17 @@
 
     <artifactId>caretmu-service</artifactId>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.caretmu</groupId>
+            <artifactId>caretmu-common</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.caretmu</groupId>
+            <artifactId>caretmu-domain</artifactId>
+            <version>${parent.version}</version>
+        </dependency>
+    </dependencies>
 </project>
