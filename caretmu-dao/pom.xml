@@ -13,6 +13,11 @@
     <artifactId>caretmu-dao</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+        <commons-dbcp.version>1.4</commons-dbcp.version>
+        <mybatis.version>3.3.0</mybatis.version>
+        <mybatis-spring.version>1.2.3</mybatis-spring.version>
+    </properties>
     <!-- 依赖 -->
     <dependencies>
         <!-- 内部 -->
@@ -30,17 +35,17 @@
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
-            <version>1.4</version>
+            <version>${commons-dbcp.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.3.0</version>
+            <version>${mybatis.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
-            <version>1.2.3</version>
+            <version>${mybatis-spring.version}</version>
         </dependency>
     </dependencies>
 </project>

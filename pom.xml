@@ -9,22 +9,28 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <!-- project properties -->
     <properties>
         <system.version>${project.version}</system.version>
+        <spring.version>4.2.0.RELEASE</spring.version>
+        <junit.version>4.8.2</junit.version>
     </properties>
+
+    <!-- child modules -->
     <modules>
         <module>caretmu-common</module>
+        <module>caretmu-domain</module>
         <module>caretmu-dao</module>
         <module>caretmu-service</module>
-        <module>caretmu-domain</module>
         <module>caretmu-web</module>
     </modules>
 
     <dependencies>
+        <!-- junit test -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.8.2</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -35,6 +41,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.10</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
