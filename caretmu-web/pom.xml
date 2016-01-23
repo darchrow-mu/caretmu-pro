@@ -18,6 +18,7 @@
         <cglib-nodep.version>2.2.2</cglib-nodep.version>
         <velocity.version>1.7</velocity.version>
         <velocity-tools.version>2.0</velocity-tools.version>
+        <servlet-api.version>2.5</servlet-api.version>
     </properties>
     <!-- 依赖 -->
     <dependencies>
@@ -30,13 +31,8 @@
 
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.2</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
+            <version>${servlet-api.version}</version>
         </dependency>
 
         <!-- velocity -->
