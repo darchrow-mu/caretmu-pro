@@ -1,6 +1,8 @@
 package com.caremu.web.controller;
 
 import com.caremu.domain.User;
+import com.caremu.domain.exception.BusinessException;
+import com.caretmu.common.utils.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,6 +23,10 @@ public class LoginController {
     @RequestMapping(value = "/login" , method = RequestMethod.GET)
     public ModelAndView loginPage(HttpServletRequest request, HttpServletResponse response) throws Exception{
         ModelAndView mv = new ModelAndView();
+        String rurl = WebUtils.findParameterValue(request, "rurl");
+        if(StringUtils.isBlank(rurl)){
+            throw new BusinessException("ddd", 1);
+        }
         mv.setViewName("login/login");
         mv.addObject("pageTitle", "hello world!");
         return mv;

@@ -10,6 +10,12 @@
     <!-- scan annotation -->
     <context:component-scan base-package="com.caremu.web"/>
 
+    <mvc:interceptors>
+        <bean id="timeInteceptor" class="com.caremu.web.interceptor.TimeInteceptor"/>
+    </mvc:interceptors>
+
+    <bean id="exceptionHandler" class="com.caremu.web.handler.SystemExceptionHandler"/>
+
     <mvc:annotation-driven>
         <mvc:message-converters>
             <bean class="org.springframework.http.converter.StringHttpMessageConverter">
