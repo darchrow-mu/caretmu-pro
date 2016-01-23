@@ -2,18 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <artifactId>caretmu-pro</artifactId>
         <groupId>com.caretmu</groupId>
         <version>0.1-SNAPSHOT</version>
     </parent>
 
-    <modelVersion>4.0.0</modelVersion>
-
     <artifactId>caretmu-dao</artifactId>
     <packaging>jar</packaging>
 
     <properties>
+        <mysql-connector-java.version>5.1.30</mysql-connector-java.version>
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <mybatis.version>3.3.0</mybatis.version>
         <mybatis-spring.version>1.2.3</mybatis-spring.version>
@@ -32,6 +33,12 @@
             <version>${parent.version}</version>
         </dependency>
         <!-- 外部 -->
+        <!-- mysql驱动包 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector-java.version}</version>
+        </dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>
             <artifactId>commons-dbcp</artifactId>
@@ -48,4 +55,7 @@
             <version>${mybatis-spring.version}</version>
         </dependency>
     </dependencies>
+    <build>
+        <finalName>${project.artifactId}</finalName>
+    </build>
 </project>
